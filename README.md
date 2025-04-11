@@ -1,4 +1,4 @@
-# Todo List Website
+# To-do List Website
 
 ## Description
 Final project for CSCI 4131: Internet Programming Fall 2024. This project aims to demonstrate our studies of the core languages and technologies of internet programming: HTML, CSS, JavaScript, the DOM, the HTTP protocol, and the standard back-end technologies used to build modern-day websites: routing, templatting, and SQL databases. 
