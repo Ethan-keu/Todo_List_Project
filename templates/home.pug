@@ -1,0 +1,45 @@
+extends main.pug 
+
+block scripts
+    script(src='./js/list.js', async='', defer='') 
+      
+append bodyContent 
+            div#main
+                div#sideBarContainer
+                    div#addNewItemButtonContainer
+                        input#addNewItemButton(type='button' name='addNewItemButton' value='Add New Item')
+                    div#addItemContainer(hidden='true') 
+                        form(action='/addItem', method='POST')
+                            div#addItemTitleContainer
+                                input(type="text" name="addItemTitle" placeholder="Title" required)
+                            div#addItemDescContainer
+                                textarea(name="addItemDesc" placeholder="Description")
+                            div#dueDateContainer
+                                input(type="datetime-local" name="dueDate" placeholder="Title" required)
+                            input(type="submit" value="Add Item")  
+                    div#sideBarContentContainer
+                        h2 Overdue Items
+                        ul
+                            if overDueList.length != 0
+                                each item in overDueList 
+                                    li=item.title
+                                        ul
+                                            li Due: #{(item.dueDate).toISOString().slice(0,10)}
+                            else 
+                                li Your Over Due Items Will Appear Here
+                div#contentContainer
+                    each item in data 
+                        div.listItem(item_id=item.id)
+                            if item.done == 1
+                                div.checkBoxContainer(list-item-id=item.id)
+                                    input.checkBox(type="checkbox" name="done" checked)
+                            else
+                                div.checkBoxContainer(list-item-id=item.id)
+                                    input.checkBox(type="checkbox" name="done")
+                            div.taskNameContainer 
+                                h3=item.title 
+                            div.itemDescriptionContainer    
+                                p=item.description
+                                p Due on: #{(item.dueDate).toISOString().slice(0,10)}
+                            div.deleteContainer(list-item-id=item.id)
+                                input.deleteButton(type="button" value="DELETE")

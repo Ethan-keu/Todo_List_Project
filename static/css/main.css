@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Gloria+Hallelujah&display=swap");
+body{
+    margin: 0;
+    background-color: cornsilk;
+    width: 100%;
+}
+
+h2, p, li{
+    font-family: 'DM Serif Text', serif;
+}
+h1{
+    text-align: center;
+    font-family: 'DM Serif Text', serif;
+    color:maroon;
+    padding-top: 5vh;
+}
+input, textarea{
+    background-color: cornsilk;
+    font-family: 'DM Serif Text', serif;
+    border-style:groove;
+}
+input:hover, textarea:hover{
+    background-color: gold;
+}
+
+
+/*##### Header and Navigation Bar #####*/
+div#headerContainer{
+    width: 100%;    
+    height:15vh; 
+    background-color: maroon;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div#LoginContainer{
+    padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div#userNameBoxContainer{
+    padding-bottom: 1vh;
+}
+div#passwordBoxContainer{
+    padding-bottom: 1vh;
+}
+
+#loginButton{
+    background-color: gold;
+    font-family: 'DM Serif Text', serif;
+    height:3vh;
+    border-style: hidden;    
+}
+
+#loginButton:hover, #registerButton:hover, #homeButton:hover, #doneButton:hover{
+    background-color: cornsilk;
+}
+
+#registerButton, #homeButton, #doneButton, #todoButton{
+    background-color: gold;
+    font-family: 'DM Serif Text', serif;
+    height:5vh;
+    border-style: hidden;
+}
+
+#titleCardContainer{
+    height:15vh;
+}
+
+h2#titleCard{
+    font-size: 5vw;
+    margin:0;
+    color:gold;
+}
+
+
+/*##### Body and side bar #####*/
+div#main {
+    display:flex;
+    flex-direction: row;    
+}
+
+div#sideBarContainer{
+    width:20vw; 
+    background-color: gold;
+}
+
+div#addNewItemButtonContainer{
+    padding-left:1vw;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+}
+div#addItemTitleContainer{
+    padding-bottom: 1vh;
+}
+div#addItemContainer{
+    padding-left:1vw;
+}
+
+div#dueDateContainer{
+    padding-top:1vh;
+    padding-bottom: 1vh;
+}
+
+div#sideBarContentContainer{
+    background-color: gold;
+    padding: 1vw;
+    height:100%;
+}
+
+
+/*##### To-do list items #####*/
+div#contentContainer{
+    width:70vw; 
+    height:auto; 
+    padding: 1rem;
+    gap:1vw;
+    background-color: cornsilk;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.listItem{
+    background-color: gold;
+    width:12vw;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkBox{
+    width:3vw;
+    height:3vh;
+}
+
+div.checkBoxContainer{
+    padding: 1vh;
+}
+
+div.taskNameContainer{
+    padding-left: 1vh;
+    padding-right:1vh;
+}
+
+div.checkBoxContainer{
+    align-self: flex-end;
+}
+div.itemDescriptionContainer{
+    text-align: start;
+    padding: 0.5vw;
+}
+
+div.deleteContainer{
+    padding: 1vw;
+    align-self: flex-end;
+}

@@ -1,0 +1,35 @@
+//-Main template containing the navigation elements 
+doctype 
+html(lang="en") 
+    head 
+        meta(charset='UTF-8')
+        link(href='/css/main.css', rel='stylesheet')
+        link(href='/image/square-ios-app-16.ico', rel='icon', type="image/x-icon")
+        title Go-pher-it!
+        block scripts
+            script
+
+    body 
+        block bodyContent
+            div#headerContainer      
+                div#LoginContainer
+                    form(action='/login', method='POST')
+                        div#userNameBoxContainer
+                            input(type="text" name="username" placeholder="username")
+                        div#passwordBoxContainer
+                            input(type="password" name="password" placeholder="password")
+                        input#loginButton(type="submit" value="Login")
+                div#homeButtonContainer
+                    form(action='/', method='GET')
+                        input#homeButton(type="submit" value="Home")  
+                div#todoButtonContainer
+                    form(action='/todo', method='GET')
+                        input#todoButton(type="submit" value="To-Do") 
+                div#DoneButtonContainer
+                    form(action='/done', method='GET')
+                        input#doneButton(type="submit" value="Done Items") 
+                div#registerButtonContainer
+                    form(action='/register', method='GET')
+                        input#registerButton(type="submit" value="Register")
+                div#titleCardContainer
+                    h2#titleCard Go-pher-it!
